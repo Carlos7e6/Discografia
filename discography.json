@@ -1,0 +1,102 @@
+{
+    "discos":
+    [
+        {
+            "name": "El ultimo Tour",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Bad Bunny"
+                }
+            ],
+            "year": "2020",
+            "type": "Trap",
+            "cover": "https://i.scdn.co/image/ab67616d0000b273005ee342f4eef2cc6e8436ab",
+            "localitation": 1,
+            "borrowed": false
+        },
+        {
+            "name": "Arde el cielo",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Maná"
+                }
+            ],
+            "year": "2008",
+            "type": "Rock-Mestizo",
+            "cover": "https://m.media-amazon.com/images/I/81XDMN3HkkL._SL1427_.jpg",
+            "localitation": 6,
+            "borrowed": false
+        },
+        {
+            "name": "Asi en el cielo como en la selva",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "La Raiz"
+                }
+            ],
+            "year": "2014",
+            "type": "Rock-Mestizo",
+            "cover": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/818YKq73IyL._SL1464_.jpg",
+            "localitation": 2,
+            "borrowed": false
+        },
+        {
+            "name": "Dolç Atac",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Auxili"
+                }
+            ],
+            "year": "2012",
+            "type": "Ska-Reggae",
+            "cover": "https://www.auxili.net/wp-content/uploads/2014/12/auxili-primer-disc.jpg",
+            "localitation": 3,
+            "borrowed": false
+        },
+        {
+            "name": "Adelantando",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Jarabe de Palo"
+                }
+            ],
+            "year": "2005",
+            "type": "Indie",
+            "cover": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41O-IWbnMyL.jpg",
+            "localitation": 4,
+            "borrowed": false
+        },
+        {
+            "name": "La teoria del fuego",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Desakato"
+                }
+            ],
+            "year": "2018",
+            "type": "Punk-Rock",
+            "cover": "https://desakato.es/wp-content/uploads/2017/06/lateoriadelfuegopreorder.jpg",
+            "localitation": 5,
+            "borrowed": false
+        }
+    ]
+  
+}
