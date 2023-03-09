@@ -12,7 +12,7 @@ class UI
            let src = document.createAttribute("src");
            let alt = document.createAttribute("alt");
 
-           div.innerHTML = "<p><b>Album:</b>" + disk.name + "</p><p><b>Autor:</b>" + disk.author + "</p><p><b>Año:</b>" + disk.year + "</p>";
+           div.innerHTML = "<p><b>Álbum:</b>" + disk.name + "</p><p><b>Autor:</b>" + disk.author + "</p><p><b>Año:</b>" + disk.year + "</p>";
 
            src.value = disk.cover;
            alt.value = disk.name;
