@@ -96,6 +96,22 @@
             "cover": "https://desakato.es/wp-content/uploads/2017/06/lateoriadelfuegopreorder.jpg",
             "localitation": 5,
             "borrowed": false
+        },
+        {
+            "name": "Jovem guarda",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Roberto Carlos"
+                }
+            ],
+            "year": "1965",
+            "type": "Melodica",
+            "cover": "https://static.qobuz.com/images/covers/33/84/0886443328433_600.jpg",
+            "localitation": 5,
+            "borrowed": false
         }
     ]
   
