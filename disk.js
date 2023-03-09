@@ -15,20 +15,19 @@ class Disk
         this.year = "";
         this.type = "";
         this.cover = "";
-        this.#localitation = 1;
+        this.#localitation = 0;
         this.#borrowed = false;
 
     };
 
-    CreateDisk(name,author,year,type,cover,localitacion)
+    CreateDisk(name,author,year,type,cover,localitation)
     {
         this.name = name;
         this.author = author;
         this.year = year;
         this.type = type;
         this.cover = cover;
-        this.localitacion = localitacion;
-
+        this.localitation = localitation;
     }
 
 }

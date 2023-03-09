@@ -14,7 +14,7 @@
             "year": "2020",
             "type": "Trap",
             "cover": "https://i.scdn.co/image/ab67616d0000b273005ee342f4eef2cc6e8436ab",
-            "localitation": 1,
+            "localitation": 0,
             "borrowed": false
         },
         {
@@ -30,7 +30,7 @@
             "year": "2008",
             "type": "Rock-Mestizo",
             "cover": "https://m.media-amazon.com/images/I/81XDMN3HkkL._SL1427_.jpg",
-            "localitation": 6,
+            "localitation": 1,
             "borrowed": false
         },
         {
@@ -62,7 +62,7 @@
             "year": "2012",
             "type": "Ska-Reggae",
             "cover": "https://www.auxili.net/wp-content/uploads/2014/12/auxili-primer-disc.jpg",
-            "localitation": 3,
+            "localitation":3,
             "borrowed": false
         },
         {
@@ -110,7 +110,23 @@
             "year": "1965",
             "type": "Melodica",
             "cover": "https://static.qobuz.com/images/covers/33/84/0886443328433_600.jpg",
-            "localitation": 5,
+            "localitation": 6,
+            "borrowed": false
+        }
+        ,{
+            "name": "Gorillaz",
+            "autor": 
+            [
+                {
+                    "nameAutor": "-",
+                    "surname": "-",
+                    "nickname": "Gorillaz"
+                }
+            ],
+            "year": "2001",
+            "type": "Rock",
+            "cover": "https://m.media-amazon.com/images/I/71jHAy4L1IL._SL1425_.jpg",
+            "localitation": 7,
             "borrowed": false
         }
     ]

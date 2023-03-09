@@ -48,9 +48,16 @@ p,h1{
 
 p{
     color:azure;
-    margin:0.2em;
-    margin-bottom: 0.5em;
-    font-size: 2em;  
+    font-size: 1.5em; 
+    margin-left: 0.5em; 
+}
+
+div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 1em;
+    height: 15em;
 }
 
 h1{
@@ -62,7 +69,7 @@ h1{
     text-decoration: underline;
 }
 b{
-    margin-right: 0.5em;
+   margin-right: 0.5em;
    text-decoration: underline;
 }
 
