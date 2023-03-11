@@ -72,4 +72,16 @@ b{
    margin-right: 0.5em;
    text-decoration: underline;
 }
+button{
+    width: 2em;
+    height: 2em;
+    background-color: white;
+}
+button p {
+    background-color: white;
+    color: black;
+    position: relative;
+    left:-0.25em;
 
+
+}

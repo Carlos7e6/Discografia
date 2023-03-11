@@ -6,34 +6,38 @@ class Discography {
         this.discs = [];
     }
 
-    AddDisk(disk)
-    {
+    AddDisk(disk) {
         this.discs.push(disk);
     }
 
-    DeleteDisk(localitation)
-    {
-        for(let i=0; i < this.discs.length;i++){
-            if(this.discs[i].localitation == localitation)
-            {
-                this.discs.splice(i,1);
+    DeleteDisk(localitation) {
+        for (let i = 0; i < this.discs.length; i++) {
+            if (this.discs[i].localitation == localitation) {
+                this.discs.splice(i, 1);
             }
         }
     }
 
-    SortDisk()
-    {
-        discs.sort();
+    SortDisk(p) {
+        this.discs.sort((a, b) => {
+            let fa = a[p];
+            let fb = b[p];
+
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
+            return 0;
+        });
     }
 
-    DiskWithoutImg()
-    {
+    DiskWithoutImg() {
         let aWithOutImg = []
-
-        for(let disk of this.discs)
-        {
-           let chipChop = [];
-            chipChop.push(disk.name, disk.autor, disk.year,disk.type)
+        for (let disk of this.discs) {
+            let chipChop = [];
+            chipChop.push(disk.name, disk.autor, disk.year, disk.type)
 
             /*for(let element of disk)
             {
@@ -48,28 +52,35 @@ class Discography {
     }
 }
 
-function Main() 
-{
+let discography = new Discography("Discográfia");
+let pantalla = new UI();
+
+function Main() {
     fetch('discography.json')
         .then(function (response) {
             return response.json();
         })
         .then(function (dataJson) {
-            let discography = new Discography("Discografia");
-            let pantalla = new UI();
-
             for (let disco of dataJson.discos) {
                 let disk = new Disk();
                 disk.CreateDisk(disco.name, disco.autor[0].nickname, disco.year, disco.type, disco.cover, disco.localitation);
                 discography.AddDisk(disk);
             }
-          //  discography.DeleteDisk(3);
-          //discography.SortDisk(discography.discs);
+
+            discography.SortDisk("name");
             pantalla.PrintDiscography(discography);
-            console.log(discography.DiskWithoutImg());
         })
         .catch(function (error) {
             console.log(error)
         });
 
+}
+
+function Delete(localitation)
+{
+    let main = document.querySelector("main");
+    discography.DeleteDisk(localitation);
+    console.log(discography.discs);
+    main.remove();
+    pantalla.PrintDiscography(discography);
 }

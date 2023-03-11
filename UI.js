@@ -1,22 +1,30 @@
 class UI {
     PrintDiscography(discography) {
-        let main = document.querySelector("main");
+        let main = document.createElement("main");
         let h1 = document.createElement("h1");
         let section = document.createElement("section");
         h1.textContent = discography.title;
 
         main.appendChild(h1);
         main.appendChild(section);
+        document.body.appendChild(main);
 
 
         for (let disk of discography.discs) 
         {
             let article = document.createElement("article");
+            
             let div = document.createElement("div");
             let img = document.createElement("img");
 
             let src = document.createAttribute("src");
             let alt = document.createAttribute("alt");
+
+            let button = document.createElement("button");
+
+            button.setAttribute("onclick","Delete("+disk.localitation+")")
+            button.innerHTML = "<p>X</p> "
+
 
             div.innerHTML = "<p><b>Álbum:</b>" + disk.name + "</p><p><b>Autor:</b>" + disk.author + "</p><p><b>Año:</b>" + disk.year + "</p><p><b>Género:</b>" + disk.type + "</p>";
 
@@ -26,6 +34,7 @@ class UI {
             img.setAttributeNode(src);
             img.setAttributeNode(alt);
 
+            article.appendChild(button);
             article.appendChild(div);
             article.appendChild(img);
 
