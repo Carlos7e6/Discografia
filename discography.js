@@ -67,7 +67,7 @@ function Main() {
                 discography.AddDisk(disk);
             }
 
-            discography.SortDisk("name");
+            pantalla.PrintInterfacePrin(discography);
             pantalla.PrintDiscography(discography);
         })
         .catch(function (error) {
@@ -78,9 +78,19 @@ function Main() {
 
 function Delete(localitation)
 {
-    let main = document.querySelector("main");
+    let section = document.querySelector("section");
     discography.DeleteDisk(localitation);
     console.log(discography.discs);
-    main.remove();
+    section.remove();
     pantalla.PrintDiscography(discography);
+}
+
+function Ordenar()
+{
+    let section = document.querySelector("section");
+    let valor = document.getElementById("propiedades").value;
+    discography.SortDisk(valor);
+    section.remove();
+    pantalla.PrintDiscography(discography);
+
 }
