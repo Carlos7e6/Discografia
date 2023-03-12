@@ -6,15 +6,24 @@ class UI {
         let h1 = document.createElement("h1");
         h1.textContent = discography.title;
 
-        //select y boton ordenar
-
         let selectDiv = document.createElement("div");
         selectDiv.className = "selector";
+        //boton crear nuevo disco
+        let createButton = document.createElement("button");
+        createButton.setAttribute("onclick","CrearDisco()")
+        createButton.className="start_options";
+        createButton.textContent = "Crear disco";
+
+        selectDiv.appendChild(createButton);
+        
+        //select y boton ordenar
+
+
         let select = document.createElement("select");
         select.setAttribute("name", "propiedades");
         select.setAttribute("id", "propiedades");
         select.setAttribute("onchange","Ordenar()")
-
+        select.className="start_options";
 
         //opciones del select y apendizamiento
 
@@ -73,8 +82,9 @@ class UI {
 
             let button = document.createElement("button");
 
-            button.setAttribute("onclick", "Delete(" + disk.localitation + ")")
-            button.innerHTML = "<p>X</p> "
+            button.setAttribute("onclick", "Delete(" + disk.localitation + ")");
+            button.className = "deleteButton";
+            button.innerHTML = "<p>Eliminar</p> ";
 
             //apendizar all.
 
