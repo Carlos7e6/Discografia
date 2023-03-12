@@ -11,7 +11,7 @@ class Disk
     constructor()
     {
         this.name = "";
-        this.author = "";
+        this.author = new Author();
         this.year = "";
         this.type = "";
         this.cover = "";
@@ -23,7 +23,7 @@ class Disk
     CreateDisk(name,author,year,type,cover,localitation)
     {
         this.name = name;
-        this.author = author;
+        this.author.nickname = author;
         this.year = year;
         this.type = type;
         this.cover = cover;
@@ -34,13 +34,23 @@ class Disk
 
 class Author
 {
-    #name;
-    #surname;
-    #nickname;
+    #name = "";
+    #surname = "";
+    #nickname = "";
+
+
+   get nickname(){
+        return this.#nickname;
+    }
+
+    set nickname(name)
+    {
+        this.#nickname = name;
+    }
 
     get AuthorComplete()
     {
-        return this.#name + this.#surname + " Alias:" + this.#nickname;
+        return this.#name + this.#surname + " Alias:" + this.nickname;
     }
     
     set AuthorComplete(changeAuthor)

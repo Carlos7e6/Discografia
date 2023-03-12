@@ -19,10 +19,26 @@ class Discography {
     }
 
     SortDisk(p) {
+        if(p == "nickname")
+        {
+            this.discs.sort((a, b) => {
+            
+                let fa = a["author"]["nickname"];
+                let fb = b["author"]["nickname"];
+                if (fa < fb) {
+                    return -1;
+                }
+                if (fa > fb) {
+                    return 1;
+                }
+                return 0;
+            });
+        }
+        console.log(p);
         this.discs.sort((a, b) => {
+            
             let fa = a[p];
             let fb = b[p];
-
             if (fa < fb) {
                 return -1;
             }
@@ -38,14 +54,6 @@ class Discography {
         for (let disk of this.discs) {
             let chipChop = [];
             chipChop.push(disk.name, disk.autor, disk.year, disk.type)
-
-            /*for(let element of disk)
-            {
-                if(variablesName(element) != cover)
-                {
-                    chipChop.push(element);
-                }
-            }*/
             aWithOutImg.push(chipChop);
         }
         return aWithOutImg;
@@ -92,5 +100,4 @@ function Ordenar()
     discography.SortDisk(valor);
     section.remove();
     pantalla.PrintDiscography(discography);
-
 }

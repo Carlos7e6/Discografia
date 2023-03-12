@@ -22,7 +22,7 @@ class UI {
         opName.setAttribute("value", "name");
         opName.textContent = "Nombre";
         let opAutor = document.createElement("option");
-        opAutor.setAttribute("value", "author");
+        opAutor.setAttribute("value", "nickname");
         opAutor.textContent = "Autor";
         let opYear = document.createElement("option");
         opYear.setAttribute("value", "year");
@@ -61,7 +61,7 @@ class UI {
             let src = document.createAttribute("src");
             let alt = document.createAttribute("alt");
             //info texto
-            div.innerHTML = "<p><b>Álbum:</b>" + disk.name + "</p><p><b>Autor:</b>" + disk.author + "</p><p><b>Año:</b>" + disk.year + "</p><p><b>Género:</b>" + disk.type + "</p>";
+            div.innerHTML = "<p><b>Álbum:</b>" + disk.name + "</p><p><b>Autor:</b>" + disk.author.nickname + "</p><p><b>Año:</b>" + disk.year + "</p><p><b>Género:</b>" + disk.type + "</p>";
             //asignacion valors atributos
             src.value = disk.cover;
             alt.value = disk.name;

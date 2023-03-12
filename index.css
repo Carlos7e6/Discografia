@@ -1,7 +1,5 @@
-@font-face {
-    font-family: 'Sono', sans-serif;
-    src: url('https://fonts.google.com/specimen/Sono');
-  }
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@500&display=swap');
+
 
 *{
     /*border: 1px white solid;*/
@@ -36,6 +34,7 @@ article
     
     width: 22em;
     border: 1px white solid;
+    border-radius: 0.2em ;
 }
 section
 {
@@ -60,6 +59,7 @@ p{
     color:azure;
     font-size: 1.5em; 
     margin-left: 0.5em; 
+    
 }
 
 div{
@@ -87,15 +87,21 @@ b{
 button{
     width: 2em;
     height: 2em;
-    background-color: white;
+    background-color: azure;
     box-shadow: none;
     display: flex;
     align-self: flex-end;
+    border-radius: 0.2em ;
 }
 
-option, select{
-    color: white;
+select
+{
+    color: azure;
     font-size: 2em;
+    border-radius: 0.2em ;
+}
+option{
+    font-size: 1em  ;
 }
 
 button:hover{
@@ -110,6 +116,7 @@ button p {
     left:-0.25em;
     text-shadow: none;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 
 }
 
