@@ -60,7 +60,7 @@ class Discography {
     }
 }
 
-let discography = new Discography("Discográfia");
+let discography = new Discography("Discografia");
 let pantalla = new UI();
 
 function Main() {
@@ -71,7 +71,8 @@ function Main() {
         .then(function (dataJson) {
             for (let disco of dataJson.discos) {
                 let disk = new Disk();
-                disk.CreateDisk(disco.name, disco.autor[0].nickname, disco.year, disco.type, disco.cover, disco.localitation);
+                disk.CreateDisk(disco.name, disco.autor[0].nickname, disco.year, disco.type, disco.cover, discography.discs.length+1);
+                console.log(discography.discs.length);
                 discography.AddDisk(disk);
             }
 
@@ -100,4 +101,14 @@ function Ordenar()
     discography.SortDisk(valor);
     section.remove();
     pantalla.PrintDiscography(discography);
+}
+
+function FormActivate()
+{
+    pantalla.PrintFormulary();
+}
+
+function CreateDiskForm()
+{
+    console.log("create");
 }

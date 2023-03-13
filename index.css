@@ -2,7 +2,7 @@
 
 
 *{
-    /* border: 1px white solid; */
+    /* border: 1px white solid;     */
     font-family: 'Sono', sans-serif;
     background-color: black;
     margin: 0px;
@@ -55,11 +55,10 @@ p,h1{
 }
 
 
-p{
+p, .start_options p{
     color:azure;
     font-size: 1.5em; 
-    margin-left: 0.5em; 
-    
+    margin-left: 0.5em;     
 }
 
 div{
@@ -94,12 +93,7 @@ b{
     
 }
 
-.deleteButton p {
-    color: azure;
-}
-
-
-.start_options
+.start_options, .createDiskButton
 {
     color: azure;
     font-size: 2em;
@@ -107,27 +101,24 @@ b{
     border: 1px azure solid;
 }
 
-.start_options:hover, .deleteButton:hover
+.start_options:hover, .deleteButton:hover, .createDiskButton:hover
 {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(113, 113, 113);
 }
 option{
     font-size: 1em  ;
 }
 
-button:hover{
-    background-color: gray;
-}
-button p {
-
-    width: 100%;
+.deleteButton p, .createDiskButton p{
+    
     background-color: rgba(255, 255, 255, 0);
-    color: black;
-    position: relative;
-    left:-0.25em;
+    color: azure;
     text-shadow: none;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-self: center;
+    padding: 0.2em;
+    margin: 0;
 
 }
 
@@ -137,3 +128,41 @@ button p {
    height: 8em;
 }
 
+.articlePlus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgPlus{
+    width: 16em;
+    margin: 1em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    color:azure
+}
+
+label{
+    text-decoration: underline;
+}
+
+label, input{
+    color:azure;
+    font-size: 1.5em;
+}
+
+.createDiskButton{
+
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.createDiskButton p{
+
+    font-size: 1em;
+}
