@@ -196,7 +196,5 @@ class UI {
     buttonCreate.innerHTML = "<p>Crear Disco</p>";
 
     imgPlus.remove();
-
-
     }
 }

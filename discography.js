@@ -111,4 +111,11 @@ function FormActivate()
 function CreateDiskForm()
 {
     console.log("create");
+    let values = document.getElementsByTagName("input");
+    let newDisk = new Disk();
+    let section = document.querySelector("section");
+    newDisk.CreateDisk(values[0].value,values[1].value,values[2].value,values[3].value,values[4].value,discography.discs.length+1);
+    discography.AddDisk(newDisk);
+    section.remove();
+    pantalla.PrintDiscography(discography);
 }
