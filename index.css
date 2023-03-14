@@ -137,6 +137,7 @@ option{
 #imgPlus{
     width: 16em;
     margin: 1em;
+
 }
 
 form{
@@ -160,10 +161,13 @@ label, input{
 .createDiskButton{
 
     margin-top: 1em;
+    overflow: hidden;
+
+
 
 }
 
 .createDiskButton p{
 
-    font-size: 1em;
+    font-size: 0.8em;
 }

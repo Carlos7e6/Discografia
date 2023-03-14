@@ -129,67 +129,47 @@ class UI {
  //   form.innerHTML = "<br>";
 
     let labelA = document.createElement("label");
-    labelA.setAttribute("for","author");
-    labelA.textContent = "Autor:";
-    form.appendChild(labelA);
+    CreateLabel(labelA,"Autor:","author",form);
 
  //   form.innerHTML = "<br>";
 
-    let inputA = document.createElement("input");
-    inputA.setAttribute("type","text");
-    inputA.setAttribute("id","author");
-    inputA.setAttribute("name","author");
-    form.appendChild(inputA);
+  let inputA = document.createElement("input");
+  CreateInput(inputA,"author",form);
 
 //    form.innerHTML = "<br>";
 
     let labelY = document.createElement("label");
-    labelY.setAttribute("for","year");
-    labelY.textContent = "Año:";
-    form.appendChild(labelY);
-
+    CreateLabel(labelY,"Año","year",form);
 //    form.innerHTML = "<br>";
 
     let inputY = document.createElement("input");
-    inputY.setAttribute("type","text");
-    inputY.setAttribute("id","year");
-    inputY.setAttribute("name","year");
-    form.appendChild(inputY);
+    CreateInput(inputY,"year",form);
 
     //form.innerHTML = "<br>";
 
     let labelT = document.createElement("label");
-    labelT.setAttribute("for","type");
-    labelT.textContent = "Género:";
-    form.appendChild(labelT);
+    CreateLabel(labelT,"Género","type",form);
 
    // form.innerHTML = "<br>";
 
     let inputT = document.createElement("input");
-    inputT.setAttribute("type","text");
-    inputT.setAttribute("id","type");
-    inputT.setAttribute("name","type");
-    form.appendChild(inputT);
+    CreateInput(inputT,"type",form);
 
    // form.innerHTML = "<br>";
 
     let labelURL = document.createElement("label");
-    labelURL.setAttribute("for","url");
-    labelURL.textContent = "URL:";
-    form.appendChild(labelURL);
+    CreateLabel(labelURL,"URL","url",form);
 
 //    form.innerHTML = "<br>";
 
     let inputURL = document.createElement("input");
-    inputURL.setAttribute("type","text");
-    inputURL.setAttribute("id","url");
-    inputY.setAttribute("name","url");
-    form.appendChild(inputURL);
+    CreateInput(inputURL,"url",form);
 
     article.appendChild(form);
     let imgPlus = document.getElementById("imgPlus");
 
     let buttonCreate = document.createElement("button");
+    buttonCreate.setAttribute("ontouchstart","CreateDiskForm()");
     buttonCreate.setAttribute("onclick","CreateDiskForm()");
     console.log("APRETADO");
     buttonCreate.className = "createDiskButton";
@@ -199,4 +179,19 @@ class UI {
 
     imgPlus.remove();
     }
+}
+
+function CreateInput(name,atriName,form)
+{
+    name.setAttribute("type","text");
+    name.setAttribute("id",atriName);
+    name.setAttribute("name",atriName);
+    form.appendChild(name);
+}
+
+function CreateLabel(name,textContent,forVal,form){
+
+    name.setAttribute("for",forVal);
+    name.textContent = textContent;
+    form.appendChild(name);
 }
