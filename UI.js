@@ -190,10 +190,12 @@ class UI {
     let imgPlus = document.getElementById("imgPlus");
 
     let buttonCreate = document.createElement("button");
-    buttonCreate.className = "createDiskButton";
     buttonCreate.setAttribute("onclick","CreateDiskForm()");
-    article.appendChild(buttonCreate);
+    console.log("APRETADO");
+    buttonCreate.className = "createDiskButton";
     buttonCreate.innerHTML = "<p>Crear Disco</p>";
+
+    article.appendChild(buttonCreate);
 
     imgPlus.remove();
     }

@@ -9,7 +9,7 @@ class Discography {
     AddDisk(disk) {
         this.discs.push(disk);
     }
-
+ //Borro segun localizador.
     DeleteDisk(localitation) {
         for (let i = 0; i < this.discs.length; i++) {
             if (this.discs[i].localitation == localitation) {
@@ -34,7 +34,6 @@ class Discography {
                 return 0;
             });
         }
-        console.log(p);
         this.discs.sort((a, b) => {
             
             let fa = a[p];
@@ -71,7 +70,7 @@ function Main() {
         .then(function (dataJson) {
             for (let disco of dataJson.discos) {
                 let disk = new Disk();
-                disk.CreateDisk(disco.name, disco.autor[0].nickname, disco.year, disco.type, disco.cover, discography.discs.length+1);
+                disk.CreateDisk(disco.name, disco.autor[0], disco.year, disco.type, disco.cover, discography.discs.length+1);
                 console.log(discography.discs.length);
                 discography.AddDisk(disk);
             }
