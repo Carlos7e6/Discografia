@@ -1,29 +1,18 @@
 class UI {
 
-    PrintInterfacePrin(discography)
-    {
+    PrintInterfacePrin(discography) {
         let main = document.createElement("main");
         let h1 = document.createElement("h1");
         h1.textContent = discography.title;
 
         let selectDiv = document.createElement("div");
         selectDiv.className = "selector";
-        //boton crear nuevo disco
-       /* let createButton = document.createElement("button");
-        createButton.setAttribute("onclick","CrearDisco()")
-        createButton.className="start_options";
-        createButton.textContent = "Crear disco";
-
-        selectDiv.appendChild(createButton);*/
-        
-        //select y boton ordenar
-
 
         let select = document.createElement("select");
         select.setAttribute("name", "propiedades");
         select.setAttribute("id", "propiedades");
-        select.setAttribute("onchange","Ordenar()")
-        select.className="start_options";
+        select.setAttribute("onchange", "Ordenar()")
+        select.className = "start_options";
 
         //opciones del select y apendizamiento
 
@@ -44,10 +33,7 @@ class UI {
         select.appendChild(opYear);
         select.appendChild(opAutor);
         select.appendChild(opGenero);
-
-
         //appends
-
         selectDiv.appendChild(select);
 
         main.appendChild(h1);
@@ -55,8 +41,7 @@ class UI {
         ///apend main al body
         document.body.appendChild(main);
     }
-    PrintDiscography(discography) 
-    {
+    PrintDiscography(discography) {
         let main = document.querySelector("main");
         let section = document.createElement("section");
         for (let disk of discography.discs) {
@@ -99,99 +84,73 @@ class UI {
         articlePlus.className = "articlePlus";
 
         let imgPlus = document.createElement("img");
-        imgPlus.setAttribute("id","imgPlus");
-        imgPlus.setAttribute("src","src/circulo-plus.png");
-        imgPlus.setAttribute("onclick","FormActivate()");
+        imgPlus.setAttribute("id", "imgPlus");
+        imgPlus.setAttribute("src", "src/circulo-plus.png");
+        imgPlus.setAttribute("onclick", "FormActivate()");
 
-        
+
         articlePlus.appendChild(imgPlus);
         section.appendChild(articlePlus);
     }
-    PrintFormulary(){
+    PrintFormulary() 
+    {
         let article = document.getElementsByClassName("articlePlus")[0];
-    console.log("form activado");
+        let form = document.createElement("form");
 
-    let form = document.createElement("form");
+        let labelN = document.createElement("label");
+        CreateLabel(labelN, "Nombre:", "name", form);
 
-    let labelN = document.createElement("label");
-    labelN.setAttribute("for","name");
-    labelN.textContent = "Album:";
-    form.appendChild(labelN);
+        let inputN = document.createElement("input");
+        CreateInput(inputN,"name",form);
 
-//    form.innerHTML = "<br>";
+        let labelA = document.createElement("label");
+        CreateLabel(labelA, "Autor:", "author", form);
 
-    let inputN = document.createElement("input");
-    inputN.setAttribute("type","text");
-    inputN.setAttribute("id","name");
-    inputN.setAttribute("name","name");
-    form.appendChild(inputN);
+        let inputA = document.createElement("input");
+        CreateInput(inputA, "author", form);
 
- //   form.innerHTML = "<br>";
+        let labelY = document.createElement("label");
+        CreateLabel(labelY, "Año", "year", form);
 
-    let labelA = document.createElement("label");
-    CreateLabel(labelA,"Autor:","author",form);
+        let inputY = document.createElement("input");
+        CreateInput(inputY, "year", form);
 
- //   form.innerHTML = "<br>";
+        let labelT = document.createElement("label");
+        CreateLabel(labelT, "Género", "type", form);
 
-  let inputA = document.createElement("input");
-  CreateInput(inputA,"author",form);
+        let inputT = document.createElement("input");
+        CreateInput(inputT, "type", form);
 
-//    form.innerHTML = "<br>";
+        let labelURL = document.createElement("label");
+        CreateLabel(labelURL, "URL", "url", form);
 
-    let labelY = document.createElement("label");
-    CreateLabel(labelY,"Año","year",form);
-//    form.innerHTML = "<br>";
+        let inputURL = document.createElement("input");
+        CreateInput(inputURL, "url", form);
 
-    let inputY = document.createElement("input");
-    CreateInput(inputY,"year",form);
+        article.appendChild(form);
+        let imgPlus = document.getElementById("imgPlus");
 
-    //form.innerHTML = "<br>";
+        let buttonCreate = document.createElement("button");
+        buttonCreate.setAttribute("ontouchstart", "CreateDiskForm()");
+        buttonCreate.setAttribute("onclick", "CreateDiskForm()");
+        buttonCreate.className = "createDiskButton";
+        buttonCreate.innerHTML = "<p>Crear Disco</p>";
+        article.appendChild(buttonCreate);
 
-    let labelT = document.createElement("label");
-    CreateLabel(labelT,"Género","type",form);
-
-   // form.innerHTML = "<br>";
-
-    let inputT = document.createElement("input");
-    CreateInput(inputT,"type",form);
-
-   // form.innerHTML = "<br>";
-
-    let labelURL = document.createElement("label");
-    CreateLabel(labelURL,"URL","url",form);
-
-//    form.innerHTML = "<br>";
-
-    let inputURL = document.createElement("input");
-    CreateInput(inputURL,"url",form);
-
-    article.appendChild(form);
-    let imgPlus = document.getElementById("imgPlus");
-
-    let buttonCreate = document.createElement("button");
-    buttonCreate.setAttribute("ontouchstart","CreateDiskForm()");
-    buttonCreate.setAttribute("onclick","CreateDiskForm()");
-    console.log("APRETADO");
-    buttonCreate.className = "createDiskButton";
-    buttonCreate.innerHTML = "<p>Crear Disco</p>";
-
-    article.appendChild(buttonCreate);
-
-    imgPlus.remove();
+        imgPlus.remove();
     }
 }
 
-function CreateInput(name,atriName,form)
-{
-    name.setAttribute("type","text");
-    name.setAttribute("id",atriName);
-    name.setAttribute("name",atriName);
+function CreateInput(name, atriName, form) {
+    name.setAttribute("type", "text");
+    name.setAttribute("id", atriName);
+    name.setAttribute("name", atriName);
     form.appendChild(name);
 }
 
-function CreateLabel(name,textContent,forVal,form){
+function CreateLabel(name, textContent, forVal, form) {
 
-    name.setAttribute("for",forVal);
+    name.setAttribute("for", forVal);
     name.textContent = textContent;
     form.appendChild(name);
 }

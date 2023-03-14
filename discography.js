@@ -109,7 +109,6 @@ function FormActivate()
 
 function CreateDiskForm()
 {
-    console.log("create");
     let values = document.getElementsByTagName("input");
     let newDisk = new Disk();
     let section = document.querySelector("section");
