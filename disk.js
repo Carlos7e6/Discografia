@@ -8,6 +8,21 @@ class Disk
     #localitation;
     #borrowed;
 
+    set localitation(loc){
+        this.#localitation=loc;
+    }
+
+    get localitation(){
+        return this.#localitation;
+    }
+
+    set borrowed(bool){
+        this.#borrowed = bool;
+    }
+
+    get borrowed(){
+        return this.#borrowed;
+    }
     constructor()
     {
         this.name = "";
@@ -43,9 +58,27 @@ class Author
         return this.#nickname;
     }
 
-    set nickname(name)
+    set nickname(nickname)
     {
-        this.#nickname = name;
+        this.#nickname = nickname;
+    }
+
+    get name(){
+        return this.#name;
+    }
+
+    set name(name)
+    {
+        this.#name = name;
+    }
+
+    get surname(){
+        return this.#name;
+    }
+
+    set surname(surname)
+    {
+        this.#surname = surname;
     }
 
     get AuthorComplete()
